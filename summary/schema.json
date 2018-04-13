@@ -1,0 +1,55 @@
+{
+    "$id": "https://raw.githubusercontent.com/sajayantony/image-scanner-specs/master/summary/example.json",
+    "type": "object",
+    "properties": {
+      "version": {
+        "$id": "/properties/version",
+        "type": "string",
+        "title": "Scan Summary Version",
+        "default": "",
+        "examples": [
+          "0.0.1"
+        ]
+      },
+      "summary": {
+        "$id": "/properties/summary",
+        "type": "array",
+        "items": {
+          "$id": "/properties/summary/items",
+          "type": "array",
+          "maxItems": 5,
+          "minItems": 0,
+          "items": [
+            {
+              "$id": "/properties/summary/items/properties/severity",
+              "title": "The Severity Schema ",
+              "default": "",
+              "examples": [
+                "Critical"
+              ],
+              "enum": [
+                "Critical",
+                "High",
+                "Medium",
+                "Low",
+                "None"
+              ]
+            },
+            {
+              "$id": "/properties/summary/items/properties/count",
+              "type": "integer",
+              "title": "Count",
+              "default": "",
+              "examples": [
+                "10"
+              ]
+            }
+          ]
+        }
+      }
+    },
+    "required": [
+      "version",
+      "summary"
+    ]
+  }
