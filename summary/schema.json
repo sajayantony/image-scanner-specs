@@ -64,6 +64,13 @@
               }
             }
           }
+        },
+        "description": {
+          "$id": "/properties/description",
+          "type": "string",
+          "title": "Description",
+          "default": "",
+          "maxLength": 1024
         }
       },
       "required": [
